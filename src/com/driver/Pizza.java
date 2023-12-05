@@ -19,6 +19,9 @@ Paper bag Price = 20
     private boolean extraToppings;
     private boolean takeAway;
 
+    private static int extraCheeseOnce = 0;
+    private static int extraToppingsOnce = 0;
+
     public Pizza(boolean isVeg) {
         this.isVeg = isVeg;
         if (isVeg) {
@@ -29,11 +32,20 @@ Paper bag Price = 20
     }
 
     public void addExtraCheese() {
+        extraCheeseOnce++;
+        if(extraCheeseOnce>1){
+            return;
+        }
         this.price += 80;
         extraCheese = true;
     }
 
     public void addExtraToppings(boolean isVeg) {
+        extraToppingsOnce++;
+        if(extraToppingsOnce>1){
+            return;
+        }
+
         extraToppings = true;
         this.isVeg = isVeg;
         if (isVeg) {

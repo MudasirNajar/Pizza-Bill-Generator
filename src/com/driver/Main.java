@@ -13,6 +13,13 @@ Total Price: 470
          */
         Pizza pizza1 = new Pizza(true);
         pizza1.addExtraCheese();
+        pizza1.addExtraCheese();
+        pizza1.addExtraCheese();
+        pizza1.addExtraCheese();
+        pizza1.addExtraCheese();
+        pizza1.addExtraToppings(true);
+        pizza1.addExtraToppings(true);
+        pizza1.addExtraToppings(true);
         pizza1.addExtraToppings(true);
         pizza1.addTakeAway();
         pizza1.totalBill();
