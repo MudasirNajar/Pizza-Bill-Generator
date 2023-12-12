@@ -14,7 +14,6 @@ Paper bag Price = 20
      */
     private int price;
     private boolean isVeg;
-    private String bill;
     private boolean extraCheese;
     private boolean extraToppings;
     private boolean takeAway;
@@ -33,22 +32,21 @@ Paper bag Price = 20
 
     public void addExtraCheese() {
         extraCheeseOnce++;
-        if(extraCheeseOnce>1){
+        if (extraCheeseOnce > 1) {
             return;
         }
         this.price += 80;
         extraCheese = true;
     }
 
-    public void addExtraToppings(boolean isVeg) {
+    public void addExtraToppings() {
         extraToppingsOnce++;
-        if(extraToppingsOnce>1){
+        if (extraToppingsOnce > 1) {
             return;
         }
 
         extraToppings = true;
-        this.isVeg = isVeg;
-        if (isVeg) {
+        if (this.isVeg) {
             this.price += 70;
         } else {
             this.price += 120;
